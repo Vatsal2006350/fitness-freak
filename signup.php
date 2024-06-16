@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        #bar
+        {
+            height:100px;
+            font-family:helvetica;
+             background-color: #bd150f; 
+             color: aliceblue;
+             padding: 4px;
+        }
+        #signup_button
+        {
+            background-color: white;
+            font-family:helvetica;
+            width: 70px;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+            float: right;
+            color: black;
+        }
+        #bar2
+        {
+             background-color:white;
+             width:800px;
+             font-family:helvetica;
+             margin: auto;
+             margin-top: 100px;
+             padding: 10px;
+             text-align: center;
+             padding-top: 50px;
+             font-weight: bold;
+             color: black;
+        }
+        #text
+        {
+            height: 40px;
+            font-family:helvetica;
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 4px;
+            font-size: 14px;
+        }
+        button
+        {
+            width: 300px;
+            font-family:helvetica;
+            height: 40px;
+            border-radius: 4px;
+            border: none;
+            color: aliceblue;
+            background-color:#bd150f;
+        }
+        a
+        {
+            text-decoration: none;
+            font-family:helvetica;
+            color:black;
+            cursor: pointer;
+        }
+        a:hover
+        {
+            font-family:helvetica;
+            text-decoration:none;
+            color:blue;
+        }
+    </style>
+</head>
+<body style="font-family: tahoma; background-color: beige;">
+    <div id="bar">
+    <div style="font-size:40px ;font-weight: bold; padding:10px;margin-top:5px;">Fitness Freak</div>
+        <div id="signup_button"><a href="login.php"> Log In </a></div>
+    </div>
+
+    <div id="bar2">
+        Sign Up to Fitness Freak <br><br>
+        <form name="frm" method="post">
+            <input type="text" name="t1" id="text" placeholder="First Name"> <br> <br>
+            <input type="text" name="t2" id="text" placeholder="Last Name"> <br> <br>
+            <select name="gen" id="text" >
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br><br>
+            <input type="number" name="t3" id="text" placeholder="Age"> <br> <br>
+            <input type="text" name="t4" id="text" placeholder="Email"> <br> <br>
+            <input type="password" name="t5" id="text" placeholder="Password"> <br> <br>
+            <input type="password" name="t6" id="text" placeholder="re-type password"> <br> <br>
+            <input type="text" name="t7" id="text" placeholder="Username"> <br> <br>
+            <button name="btn">Submit</Button>
+            <br><br><br>
+        </form>
+
+        <?php
+        
+        if(isset($_POST['btn']))
+        {
+            $fn=$_POST['t1'];
+            $ln=$_POST['t2'];
+            $gen=$_POST['gen'];
+            $age=$_POST['t3'];
+            $eml=$_POST['t4'];
+            $pass=$_POST['t5'];
+            $unm=$_POST['t7'];
+
+            $con=new Mysqli("localhost","vatsal2006350","Vatsal@2006","fitness_freak");
+
+            if($con->connect_error) die($con->connect_error);
+        
+            else{
+                $sql="insert into reg(fname,lname,gender,age,eml,pass,usrnm) values('$fn','$ln','$gen','$age','$eml','$pass','$unm')";
+
+                $con->query($sql);
+
+                $r=$con->affected_rows;
+
+                if ($r==1) echo "<h2>Data inserted</h2>";
+                else echo "<h2>Error</h2>";
+
+                $con->close();
+            }
+        }
+        ?>
+    </div>
+</body>
+</html>
