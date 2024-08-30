@@ -129,29 +129,33 @@ input[type="submit"]:hover {
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.php"><img src="logo.jpg" alt="" style="height: 60px;width: 70px;"></a>
+                            <a href="index.html"><img src="logo.jpg" alt="" style="height: 60px;width: 70px;"></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="about.php">About</a></li>
-                                    <li><a href="courses.php">Expert Insights</a></li>
-                                    <li><a href="pricing.php">Diet Planner</a></li>
-                                    <li><a href="gallery.php">Gallery</a></li>
-                                    <li><a href="blog.php">Blog</a>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="courses.html">Expert Insights</a></li>
+                                    <li><a href="pricing.html">Diet Planner</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="blog.html">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.php">Blog</a></li>
-                                            <li><a href="blog_details.php">Blog Details</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_details.html">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.php">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>          
                         <!-- Header-btn -->
-                        <?php 
+                        <div class="header-btns d-none d-lg-block f-right">
+                           <a href="https://fitness-freak-tracker.vercel.app/contact" class="btn">Contact me</a>
+                       </div>   
+                        <!-- Header-btn -->
+                        <!-- <?php 
                                 if(isset($_SESSION['USER']))
                                 {
                                     ?>
@@ -163,12 +167,12 @@ input[type="submit"]:hover {
                                 }
                         ?>
                         <?php if(isset($_SESSION['USER']) && !empty($_SESSION['USER'])){ ?>
-                            <a href="logout.php" class="btn btn-danger1" style="float:right;margin:15px; padding:22px; margin-top:-2px;">Logout</a>
+                            <a href="logout.html" class="btn btn-danger1" style="float:right;margin:15px; padding:22px; margin-top:-2px;">Logout</a>
                         <?php } else {?>
                         <div class="header-btns d-none d-lg-block f-right">
-                           <a href="login.php" class="btn">Login / Sign Up</a>
+                           <a href="login.html" class="btn">Login / Sign Up</a>
                        </div>
-                       <?php }?>
+                       <?php }?> -->
                        <!-- Mobile Menu -->
                        <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -191,7 +195,7 @@ input[type="submit"]:hover {
                             <div class="hero__caption">
                                 <span data-animation="fadeInLeft" data-delay="0.1s" >Welcome to</span>
                                 <h1 data-animation="fadeInLeft" data-delay="0.4s">Fitness Freak</h1>
-                                <a href="courses.php" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My Courses</a>
+                                <a href="courses.html" class="border-btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">My Courses</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +240,7 @@ input[type="submit"]:hover {
                                 <div class="topic-content">
                                     <h3>Exercising</h3>
                                     <p>This is a popular trend in the fitness world today. My program will improve your health and have you feeling great. You’ll see an improvement in your performance and flexibility in no time. <br>.</p>
-                                    <a href="courses.php" class="border-btn">View Videos</a>
+                                    <a href="courses.html" class="border-btn">View Videos</a>
                                 </div>
                             </div>
                         </div>
@@ -250,7 +254,7 @@ input[type="submit"]:hover {
                                 <div class="topic-content">
                                     <h3>Healthy Eating</h3>
                                     <p>The unique program I’ve developed will help burn calories, boost metabolism and improve your overall health. A combination of strategic exercises using strength bands and a healthy diet will help you optimize your weight loss.<br></p>
-                                    <a href="pricing.php" class="btn">View Diet Planner</a>
+                                    <a href="pricing.html" class="btn">View Diet Planner</a>
                                 </div>
                             </div>
                         </div>
@@ -318,7 +322,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Dynamic Stretching </h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -329,7 +333,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Weight Training </h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -340,7 +344,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Dynamic Stretching</h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -351,7 +355,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Dynamic Stretching </h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -362,7 +366,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Cardio Fitness </h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -373,7 +377,7 @@ input[type="submit"]:hover {
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Dynamic Stretching </h3>
-                                <a href="gallery.php"><i class="ti-plus"></i></a>
+                                <a href="gallery.html"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -577,7 +581,7 @@ input[type="submit"]:hover {
                             </div>
                             <div class="blog-cap">
                                 <span>Health & Wellness</span>
-                                <h3><a href="blog_details.php">The Beginning: Tipping the Scale at 140kg</a></h3>
+                                <h3><a href="blog_details.html">The Beginning: Tipping the Scale at 140kg</a></h3>
                             </div>
                         </div>
                     </div>
@@ -590,7 +594,7 @@ input[type="submit"]:hover {
                             </div>
                             <div class="blog-cap">
                                 <span>Exercising & Health</span>
-                                <h3><a href="blog_details_2.php">The Unsung Hero of My Journey</a></h3>
+                                <h3><a href="blog_details_2.html">The Unsung Hero of My Journey</a></h3>
                             </div>
                         </div>
                     </div>
@@ -755,7 +759,7 @@ input[type="submit"]:hover {
                         <div class="single-footer-caption mb-50 text-center">
                             <!-- logo -->
                             <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.php"><img src="logo.jpg" style="height: 200px; width:200px"></a>
+                                <a href="index.html"><img src="logo.jpg" style="height: 200px; width:200px"></a>
                             </div>
                             <!-- Menu -->
                             <!-- Header Start -->
@@ -766,12 +770,12 @@ input[type="submit"]:hover {
                                         <div class="main-menu main-menu2 text-center">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="index.php">Home</a></li>
-                                                    <li><a href="about.php">About</a></li>
-                                                    <li><a href="courses.php">Expert Insights</a></li>
-                                                    <li><a href="pricing.php">Diet Planner</a></li>
-                                                    <li><a href="gallery.php">Gallery</a></li>
-                                                    <li><a href="contact.php">Contact</a></li>
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="about.html">About</a></li>
+                                                    <li><a href="courses.html">Expert Insights</a></li>
+                                                    <li><a href="pricing.html">Diet Planner</a></li>
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                    <li><a href="contact.html">Contact</a></li>
                                                 </ul>
                                             </nav>
                                         </div>   
